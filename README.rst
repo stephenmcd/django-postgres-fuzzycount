@@ -45,7 +45,7 @@ PostgreSQL tables without any ``WHERE`` OR ``HAVING`` clauses::
     from django.db import models
     from fuzzzycount import FuzzyCountManager
 
-    class BigData(models.Manager):
+    class BigData(models.Model):
 
         big = models.BooleanField(default=True)
         data = models.TextField()

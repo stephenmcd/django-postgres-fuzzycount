@@ -9,7 +9,7 @@ from model_utils.managers import PassThroughManager
 class FuzzyCountQuerySet(QuerySet):
 
     def count(self):
-        is_postgresql = "postgresql" in settings.DATABASES[self.db]["ENGINE"]
+        is_postgresql = settings.DATABASES[self.db]["ENGINE"].endswith(("postgis", "postgresql"))
         is_filtered = self.query.where or self.query.having
         if not is_postgresql or is_filtered:
             return super(FuzzyCountQuerySet, self).count()
