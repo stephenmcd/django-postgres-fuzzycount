@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "django-postgres-fuzzycount",
-    version = "0.1.0",
+    version = "0.1.1",
     author = "Stephen McDonald",
     author_email = "stephen.mc@gmail.com",
     description = ("A Django model manager providing fast / fuzzy counts "
