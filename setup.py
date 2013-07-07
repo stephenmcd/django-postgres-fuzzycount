@@ -1,5 +1,5 @@
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(
@@ -12,8 +12,7 @@ setup(
     long_description = open("README.rst").read(),
     url = "http://github.com/kouio/django-postgres-fuzzycount",
     zip_safe = False,
-    include_package_data = True,
-    packages = find_packages(),
+    py_modules=["fuzzycount",],
     install_requires = [
         "sphinx-me >= 0.1.2",
         "django >= 1.4",
