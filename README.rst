@@ -52,7 +52,6 @@ PostgreSQL tables without any ``WHERE`` OR ``HAVING`` clauses::
 
         objects = FuzzyCountManager()
 
-
     BigData.objects.count()  # Uses fuzzycount
     BigData.objects.filter(id__gt=9000).count()  # Doesn't use fuzzycount
 
@@ -61,7 +60,15 @@ being used, and only applies the approximate count query when for
 PostgreSQL, so other database backends can be used and will behave as
 usual (for varying definitions of `usual`, depending on the database :-).
 
+Inspiration
+===========
+
+  * `postgres_loose_table_counts`_, a Ruby gem providing the same
+    approach for Rails
+  * This `Django snippet`_, which bakes the approach into the admin
 
 .. _`slow COUNT queries in PostgreSQL`: http://wiki.postgresql.org/wiki/Slow_Counting
 .. _`kouio RSS reader`: https://kouio.com
 .. _`pip`: http://www.pip-installer.org/
+.. _`postgres_loose_table_counts`: https://github.com/goodfilms/postgres_loose_table_counts
+.. _`Django snippet`: http://djangosnippets.org/snippets/2855/
