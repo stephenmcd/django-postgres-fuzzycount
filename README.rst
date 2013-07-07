@@ -56,7 +56,7 @@ PostgreSQL tables without any ``WHERE`` OR ``HAVING`` clauses::
     BigData.objects.filter(id__gt=9000).count()  # Doesn't use fuzzycount
 
 The ``fuzzycount.FuzzyCountManager`` also checks the database engine
-being used, and only applies the approximate count query when for
+being used, and only applies the approximate count query when using
 PostgreSQL, so other database backends can be used and will behave as
 usual (for varying definitions of `usual`, depending on the database :-).
 
