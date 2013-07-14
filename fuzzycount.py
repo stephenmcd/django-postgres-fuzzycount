@@ -11,9 +11,9 @@ class FuzzyCountQuerySet(QuerySet):
     def count(self):
         postgres_engines = ("postgis", "postgresql", "django_postgrespool")
         engine = settings.DATABASES[self.db]["ENGINE"].split(".")[-1]
-        is_postgres = engine.startswith(postgresql_engines)
+        is_postgres = engine.startswith(postgres_engines)
         is_filtered = self.query.where or self.query.having
-        if not is_postgres or is_filtered
+        if not is_postgres or is_filtered:
             return super(FuzzyCountQuerySet, self).count()
         cursor = connections[self.db].cursor()
         cursor.execute("SELECT reltuples FROM pg_class "
