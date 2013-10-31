@@ -1,4 +1,3 @@
-
 Created by `Stephen McDonald <http://twitter.com/stephen_mcd>`_
 
 Introduction
@@ -43,7 +42,7 @@ its ``count()`` method will return an approximate value when querying
 PostgreSQL tables without any ``WHERE`` OR ``HAVING`` clauses::
 
     from django.db import models
-    from fuzzzycount import FuzzyCountManager
+    from fuzzycount import FuzzyCountManager
 
     class BigData(models.Model):
 
