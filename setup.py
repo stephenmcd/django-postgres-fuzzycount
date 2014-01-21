@@ -1,4 +1,3 @@
-
 from setuptools import setup
 
 
@@ -10,7 +9,7 @@ setup(
     description = ("A Django model manager providing fast / fuzzy counts "
                    "for PostgreSQL database tables."),
     long_description = open("README.rst").read(),
-    url = "http://github.com/kouio/django-postgres-fuzzycount",
+    url = "http://github.com/stephenmcd/django-postgres-fuzzycount",
     zip_safe = False,
     py_modules=["fuzzycount",],
     install_requires = [
