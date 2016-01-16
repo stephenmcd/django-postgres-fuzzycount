@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name = "django-postgres-fuzzycount",
-    version = "0.1.6",
+    version = "0.2.0",
     author = "Stephen McDonald",
     author_email = "stephen.mc@gmail.com",
     description = ("A Django model manager providing fast / fuzzy counts "
@@ -14,8 +14,7 @@ setup(
     py_modules=["fuzzycount",],
     install_requires = [
         "sphinx-me >= 0.1.2",
-        "django >= 1.4",
-        "django-model-utils==1.4.0",
+        "django >= 1.7",
     ],
     classifiers = [
         "Development Status :: 5 - Production/Stable",
