@@ -59,12 +59,6 @@ being used, and only applies the approximate count query when using
 PostgreSQL, so other database backends can be used and will behave as
 usual (for varying definitions of `usual`, depending on the database :-).
 
-
-Requirements
-============
-Django 1.7+
-
-
 Inspiration
 ===========
 
