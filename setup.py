@@ -14,7 +14,7 @@ setup(
     py_modules=["fuzzycount",],
     install_requires = [
         "sphinx-me >= 0.1.2",
-        "django >= 1.7",
+        "django >= 1.9",
     ],
     classifiers = [
         "Development Status :: 5 - Production/Stable",
